@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Justice League Sidekick Recruitment</title>
+  <style>
+    /* Basic CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    #login-form {
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+    #login-form h2 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #333;
+    }
+    #login-form input[type="text"] {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    #login-form input[type="text"]:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+    #login-form #captcha {
+      margin-bottom: 10px;
+    }
+    #login-form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #login-form button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <header>
+    <h1>Justice League Sidekick Recruitment</h1>
+  </header>
+  <div class="container">
+    <div id="login-form">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Your Name"><br>
+      <input type="text" id="captcha" placeholder="Enter CAPTCHA"><br>
+      <p id="captcha-text"></p>
+      <button onclick="login()">Login</button>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for login functionality
+    const captchaText = generateCaptcha();
+    document.getElementById('captcha-text').textContent = captchaText;
+
+    function login() {
+      const username = document.getElementById('username').value;
+      const captchaInput = document.getElementById('captcha').value;
+
+      // Simple authentication check (replace with proper authentication logic)
+      if (captchaInput === captchaText) {
+        alert('Hello ' + username + ', please take the personality test.');
+        // Redirect to personality test page or perform other actions
+      } else {
+        alert('Invalid CAPTCHA. Please try again.');
+      }
+    }
+
+    function generateCaptcha() {
+      const captchaLength = 13;
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      let captcha = '';
+      for (let i = 0; i < captchaLength; i++) {
+        captcha += characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+      return captcha;
+    }
+  </script>
+</body>
+</html>

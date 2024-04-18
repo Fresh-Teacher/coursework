@@ -3,12 +3,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7;
+    background-color: #FEFEBE;
   }
   
   header {
-    background-color: #333;
-    color: #fff;
+    background-color: #FEFEBE;
+    color: #FEFEBE;
     padding: 10px;
     text-align: center;
   }
@@ -21,7 +21,7 @@ body {
     max-width: 800px;
     margin: 20px auto;
     padding: 0 20px;
-    background-color: #fff;
+    background-color: #FEFEBE;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
@@ -34,7 +34,7 @@ body {
   #login-form h2 {
     margin-bottom: 10px;
     font-size: 20px;
-    color: #333;
+    color: #FEFEBE;
   }
   
   #login-form input[type="text"] {
@@ -95,3 +95,26 @@ body {
     }
   }
   
+  /* Updated CSS */
+#video-section {
+  background-color: #f7f7f7; /* Set a background color for the video section */
+  padding: 20px 0; /* Add some padding for spacing */
+}
+
+#video-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center; /* Center the video */
+}
+
+#video-section h2 {
+  margin-bottom: 20px; /* Add space below the heading */
+}
+
+#video-section video {
+  max-width: 100%; /* Make the video responsive */
+  height: auto;
+}
+.recruitment-title {
+  color: red;
+}

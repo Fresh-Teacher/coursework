@@ -344,7 +344,7 @@ body {
                     <!-- Video -->
                     <center>
                         <video id="heroVideo" autoplay loop muted>
-                            <source src="videoplayback (1) (1).mp4" type="video/mp4">
+                            <source src="superhero-team-2-video (1).mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </center>
@@ -358,197 +358,228 @@ body {
             </section>
 
             <div class="quiz-container">
-                   <!-- Paragraph Texts -->
-                   <div class="paragraph-texts">
-                    <center><h1 class="logo">PERSONALITY TEST:</h1><br></center>
-                </div>
-                <div class="question" id="question"></div>
-                <div class="answers" id="answers"></div>
-                <div class="progress" id="progress"></div>
-                <div class="loading-container" id="loading-container">
-                    <div class="loading" id="loading"></div>
-                    <div id="loading-text">Loading... 0%</div>
-                  </div>
+              <div class="paragraph-texts">
+                  <center><h1 class="logo">PERSONALITY TEST:</h1><br></center>
               </div>
-            
-              <script>
-                const questions = [
-                  // General questions
+              <div class="question" id="question"></div>
+              <div class="answers" id="answers"></div>
+              <div class="progress" id="progress"></div>
+              <div class="loading-container" id="loading-container">
+                  <div class="loading" id="loading"></div>
+                  <div id="loading-text">Loading... 0%</div>
+              </div>
+          </div>
+          
+          <script>
+              const questions = [
                   {
-                    question: "How do you approach challenges?",
-                    answers: ["With courage and determination", "By relying on your training and skills", "By seeking advice and wisdom from others", "By adapting to the situation and finding creative solutions"],
-                    values: [1, 2, 3, 4]
+                      question: "Which city would you prefer to patrol with your hero?",
+                      answers: [
+                          "Gotham City ",
+                          "Metropolis ",
+                          "Themyscira ",
+                          "Central City "
+                      ],
+                      values: ["Batman", "Superman", "Wonder Woman", "The Flash"]
                   },
                   {
-                    question: "What motivates you?",
-                    answers: ["A sense of duty and honor", "A desire to make a positive impact", "A commitment to protect the innocent", "A quest for personal growth and understanding"],
-                    values: [1, 2, 3, 4]
+                      question: "What’s your preferred mode of transportation?",
+                      answers: [
+                          "Batmobile ",
+                          "Kryptonian spaceship ",
+                          "Invisible jet ",
+                          "Speed Force "
+                      ],
+                      values: ["Batman", "Superman", "Wonder Woman", "The Flash"]
                   },
                   {
-                    question: "How do you view teamwork?",
-                    answers: ["Valuing cooperation and collaboration", "Preferring to work independently", "Recognizing the importance of diversity and inclusion", "Taking on leadership roles when necessary"],
-                    values: [1, 2, 3, 4]
+                      question: "Choose a superpower to complement your hero:",
+                      answers: [
+                          "Genius-level intellect ",
+                          "Telepathy ",
+                          "Magic ",
+                          "Archery skills "
+                      ],
+                      values: ["Cyborg", "Martian Manhunter", "Zatanna", "Green Arrow"]
                   },
                   {
-                    question: "How do you handle conflicts?",
-                    answers: ["By seeking peaceful resolutions", "By confronting them directly", "By finding common ground through negotiation", "By standing up for what you believe in"],
-                    values: [1, 2, 3, 4]
+                      question: "How do you handle stress during a battle?",
+                      answers: [
+                          "Analyze the situation calmly ",
+                          "Channel your inner strength ",
+                          "Invoke ancient Amazonian wisdom ",
+                          "Run circles around the enemy "
+                      ],
+                      values: ["Batman", "Superman", "Wonder Woman", "The Flash"]
                   },
                   {
-                    question: "What is your preferred communication style?",
-                    answers: ["Direct and straightforward", "Diplomatic and tactful", "Empathetic and understanding", "Assertive and confident"],
-                    values: [1, 2, 3, 4]
+                      question: "Your ideal sidekick uniform color:",
+                      answers: [
+                          "Black and gray ",
+                          "Red and blue ",
+                          "Golden armor ",
+                          "Scarlet lightning bolt "
+                      ],
+                      values: ["Batman", "Superman", "Wonder Woman", "The Flash"]
                   },
                   {
-                    question: "How do you deal with uncertainty?",
-                    answers: ["By staying calm and composed", "By analyzing the situation and making a plan", "By seeking advice from others", "By embracing the unknown and taking risks"],
-                    values: [1, 2, 3, 4]
+                      question: "What’s your favorite gadget?",
+                      answers: [
+                          "Batarangs ",
+                          "Heat vision goggles ",
+                          "Lasso of Truth ",
+                          "Speedster boots "
+                      ],
+                      values: ["Batman", "Superman", "Wonder Woman", "The Flash"]
                   },
                   {
-                    question: "What role do you typically take in group settings?",
-                    answers: ["Leader", "Contributor", "Mediator", "Observer"],
-                    values: [1, 2, 3, 4]
+                      question: "Choose a catchphrase:",
+                      answers: [
+                          "“I am vengeance, I am the night!” ",
+                          "“Up, up, and away!” ",
+                          "“By Hera’s grace!” ",
+                          "“Zoom, zoom!” "
+                      ],
+                      values: ["Batman", "Superman", "Wonder Woman", "The Flash"]
                   },
                   {
-                    question: "What is your approach to problem-solving?",
-                    answers: ["Logical and analytical", "Creative and innovative", "Collaborative and inclusive", "Pragmatic and efficient"],
-                    values: [1, 2, 3, 4]
+                      question: "What’s your preferred team dynamic?",
+                      answers: [
+                          "Lone wolf vigilante ",
+                          "Global protector ",
+                          "Warrior of justice ",
+                          "Speedster squad "
+                      ],
+                      values: ["Batman", "Superman", "Wonder Woman", "The Flash"]
                   },
                   {
-                    question: "How do you prioritize tasks?",
-                    answers: ["By importance and urgency", "By deadlines and schedules", "By personal interest and passion", "By seeking input from others"],
-                    values: [1, 2, 3, 4]
+                      question: "How do you unwind after a mission?",
+                      answers: [
+                          "Brooding in the Batcave ",
+                          "Flying through the stratosphere ",
+                          "Training with the Amazons ",
+                          "Challenging time-traveling villains "
+                      ],
+                      values: ["Batman", "Superman", "Wonder Woman", "The Flash"]
                   },
                   {
-                    question: "How do you handle failure?",
-                    answers: ["As a learning opportunity", "With resilience and perseverance", "By seeking support from others", "By accepting responsibility and moving forward"],
-                    values: [1, 2, 3, 4]
+                      question: "Your ultimate goal as a sidekick:",
+                      answers: [
+                          "Uncover every villain’s secret identity ",
+                          "Inspire hope in humanity ",
+                          "Bring peace to the world ",
+                          "Break the sound barrier daily "
+                      ],
+                      values: ["Batman", "Superman", "Wonder Woman", "The Flash"]
                   }
-                ];
-            
-                const heroes = [
-                  { name: "Superman", traits: [1, 3, 2, 4, 1, 2, 3, 4, 1, 2] }, // Example traits for Superman
-                  { name: "Batman", traits: [2, 4, 1, 3, 2, 3, 4, 1, 2, 3] },    // Example traits for Batman
-                  { name: "Wonder Woman", traits: [3, 2, 4, 1, 3, 4, 1, 2, 3, 4] }, // Example traits for Wonder Woman
-                  { name: "The Flash", traits: [4, 1, 3, 2, 4, 1, 2, 3, 4, 1] }, // Example traits for The Flash
-                  { name: "Aquaman", traits: [3, 1, 4, 2, 3, 4, 1, 2, 3, 4] }, // Example traits for Aquaman
-                  { name: "Cyborg", traits: [2, 1, 4, 3, 2, 3, 4, 1, 2, 3] } // Example traits for Cyborg
-                  // Add more heroes with their traits here
-                ];
-            
-                let userTraits = [];
-                let currentQuestionIndex = 0;
-            
-                const questionElement = document.getElementById("question");
-                const answersElement = document.getElementById("answers");
-                const loadingContainer = document.getElementById("loading-container");
-                const progressElement = document.getElementById("progress");
-            
-                function showQuestion() {
-  const currentQuestion = questions[currentQuestionIndex];
-  questionElement.textContent = currentQuestion.question;
-  answersElement.innerHTML = "";
-  currentQuestion.answers.forEach((answer, index) => {
-    const answerButton = document.createElement("button");
-    answerButton.classList.add("answer-button", "btn", "btn-primary"); // Adding classes for blue color (Bootstrap btn-primary)
-    answerButton.textContent = answer;
-    answerButton.addEventListener("click", () => {
-      answerSelected(index);
-    });
-    answersElement.appendChild(answerButton);
-  });
-  updateProgress();
-}
-
-            
-                function answerSelected(answerIndex) {
-                  userTraits.push(questions[currentQuestionIndex].values[answerIndex]);
+              ];
+          
+              let userTraits = [];
+              let currentQuestionIndex = 0;
+          
+              const questionElement = document.getElementById("question");
+              const answersElement = document.getElementById("answers");
+              const loadingContainer = document.getElementById("loading-container");
+              const progressElement = document.getElementById("progress");
+          
+              function showQuestion() {
+                  const currentQuestion = questions[currentQuestionIndex];
+                  questionElement.textContent = currentQuestion.question;
+                  answersElement.innerHTML = "";
+                  currentQuestion.answers.forEach((answer, index) => {
+                      const answerButton = document.createElement("button");
+                      answerButton.classList.add("answer-button", "btn", "btn-primary"); // Adding classes for blue color (Bootstrap btn-primary)
+                      answerButton.textContent = answer;
+                      answerButton.addEventListener("click", () => {
+                          answerSelected(currentQuestion.values[index]);
+                      });
+                      answersElement.appendChild(answerButton);
+                  });
+                  updateProgress();
+              }
+          
+              function answerSelected(hero) {
+                  userTraits.push(hero);
                   currentQuestionIndex++;
                   if (currentQuestionIndex < questions.length) {
-                    showQuestion();
+                      showQuestion();
                   } else {
-                    showLoadingAnimation();
-                    setTimeout(matchCharacter, 2000); // Simulating processing time
+                      showLoadingAnimation();
+                      setTimeout(matchCharacter, 2000); // Simulating processing time
                   }
-                }
-            
-                function showLoadingAnimation() {
+              }
+          
+              function showLoadingAnimation() {
                   questionElement.textContent = "";
                   answersElement.innerHTML = "";
                   loadingContainer.style.display = "block";
                   progressElement.textContent = ""; // Hide progress text
                   let progress = 0;
                   const progressInterval = setInterval(() => {
-                    if (progress <= 100) {
-                      document.getElementById('loading-text').textContent = `Loading... ${progress}%`;
-                      progress += 5; // Adjust the increment for smoother animation
-                    } else {
-                      clearInterval(progressInterval);
-                      loadingContainer.style.display = "none"; // Hide loading container after reaching 100%
-                    }
+                      if (progress <= 100) {
+                          document.getElementById('loading-text').textContent = `Loading... ${progress}%`;
+                          progress += 5; // Adjust the increment for smoother animation
+                      } else {
+                          clearInterval(progressInterval);
+                          loadingContainer.style.display = "none"; // Hide loading container after reaching 100%
+                      }
                   }, 100); // Adjust the interval for smoother animation
-                }
-            
-                function matchCharacter() {
-                  let bestMatch = { hero: null, similarity: -1 };
-                  heroes.forEach(hero => {
-                    const similarity = calculateSimilarity(userTraits, hero.traits);
-                    if (similarity > bestMatch.similarity) {
-                      bestMatch = { hero: hero.name, similarity: similarity };
-                    }
+              }
+          
+              function matchCharacter() {
+                  let bestMatch = { hero: null, count: 0 };
+                  const heroCount = {};
+                  userTraits.forEach(hero => {
+                      if (heroCount[hero]) {
+                          heroCount[hero]++;
+                      } else {
+                          heroCount[hero] = 1;
+                      }
+                      if (heroCount[hero] > bestMatch.count) {
+                          bestMatch = { hero: hero, count: heroCount[hero] };
+                      }
                   });
                   showResult(bestMatch.hero);
-                }
-            
-                function calculateSimilarity(traits1, traits2) {
-                  let sum = 0;
-                  for (let i = 0; i < traits1.length; i++) {
-                    sum += Math.abs(traits1[i] - traits2[i]);
-                  }
-                  return sum;
-                }
-            
-                function showResult(heroName) {
-              loadingContainer.style.display = "none";
-              questionElement.innerHTML = `Congratulations! You're fit to be ${heroName} according to your responses.<br>`;
-              
-              // Create an image element for the matched hero
-              const imageElement = document.createElement("img");
-              imageElement.src = `${heroName}.gif`;
-              imageElement.alt = `${heroName} image`;
-              imageElement.classList.add("hero-image", "img-medium"); // Add classes for styling
-
-              
-              // Append the image to the question element
-              questionElement.appendChild(imageElement);
-              
-              // Add a line break
-              questionElement.appendChild(document.createElement("br"));
-              
-              // Create a "Back to Home" button with Bootstrap classes
-              const backButton = document.createElement("button");
-              backButton.textContent = "Repeat Test";
-              backButton.className = "btn btn-danger"; // Bootstrap classes
-              
-              // Add an event listener to the button
-              backButton.addEventListener("click", function() {
-                // You can modify this part to redirect to your home page or perform any other action
-                // For example, window.location.href = "your_home_page_url";
-                // For now, let's just reload the current page
-                window.location.reload();
-              });
-              
-              // Append the button to the question element
-              questionElement.appendChild(backButton);
-            }
-            
-            
-                function updateProgress() {
+              }
+          
+              function showResult(heroName) {
+                  loadingContainer.style.display = "none";
+                  questionElement.textContent = `Congratulations! You're fit to be ${heroName} according to your responses.`;
+          
+                  // Create an image element for the matched hero
+                  const imageElement = document.createElement("img");
+                  imageElement.src = `${heroName}.gif`;
+                  imageElement.alt = `${heroName} image`;
+                  imageElement.classList.add("hero-image", "img-medium"); // Add classes for styling
+          
+                  // Append the image to the question element
+                  questionElement.appendChild(imageElement);
+          
+                  // Add a line break
+                  questionElement.appendChild(document.createElement("br"));
+          
+                  // Create a "Repeat Test" button with Bootstrap classes
+                  const backButton = document.createElement("button");
+                  backButton.textContent = "Repeat Test";
+                  backButton.className = "btn btn-danger"; // Bootstrap classes
+          
+                  // Add an event listener to the button
+                  backButton.addEventListener("click", function() {
+                      // Reload the page to repeat the test
+                      window.location.reload();
+                  });
+          
+                  // Append the button to the question element
+                  questionElement.appendChild(backButton);
+              }
+          
+              function updateProgress() {
                   progressElement.textContent = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
-                }
-            
-                // Start personality test
-                showQuestion();
-              </script>
+              }
+          
+              // Start personality test
+              showQuestion();
+          </script>
+          
             </body>
             </html>

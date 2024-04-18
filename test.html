@@ -1,114 +1,54 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join the Justice League and become a sidekick! Take our personality test to discover which superhero you could be.">
+  <title>Justice League Sidekick Recruitment</title>
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Bootstrap CSS -->
 
-    <title>Justice League</title>
-
-    <meta name="description"
-        content="The creators of the Batman: Arkham series are back with a brand new action-adventure shooter. The most dangerous villains in the DC Universe have been forced to team up and take on a new mission: Kill the Justice League. Create Chaos in Metropolis. You are the Suicide Squad. Coming in 2023 to PS5, Xbox Series X and PC." />
-
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Teko:wght@500;600&display=swap"
-        rel="stylesheet">
-
-
-    <meta property="og:title" content="HOME" />
-    <meta property="og:site_name" content="Suicide Squad: Kill the Justice League" />
-    <meta property="og:description"
-        content="The creators of the Batman: Arkham series are back with a brand new action-adventure shooter. The most dangerous villains in the DC Universe have been forced to team up and take on a new mission: Kill the Justice League. Create Chaos in Metropolis. You are the Suicide Squad. Coming in 2023 to PS5, Xbox Series X and PC." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.suicidesquadgame.com" />
-    <meta property="og:image" content="https://www.suicidesquadgame.com/images/suicide-squad-share.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="675" />
-    <meta property="og:locale" content="en_US" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@suicidesquadRS" />
-    <link rel="manifest" href="/images/manifest.json" crossorigin="use-credentials">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-
-
-
-
-
-    <style>
-        .webp section.info .bg {
-            background-image: url(https://cdn.suicidesquadgame.com/_2023b/home/game-info-bg-m.webp);
-        }
-
-        .no-webp section.info .bg {
-            background-image: url(https://cdn.suicidesquadgame.com/_2023b/home/game-info-bg-bg-m.jpg);
-        }
-
-        section.preorder {
-            background-image: url(https://cdn.suicidesquadgame.com/_2023b/static/footer-metropolis-bg-m.jpg);
-        }
-
-        .mobile .episode-1 {
-            background-image: url(https://cdn.suicidesquadgame.com/season-1/season-1-keyart-bg-m.jpg);
-        }
-
-        .mobile .episode-2 {
-            background-image: url(https://cdn.suicidesquadgame.com/season-1/season-1-bg-m.jpg);
-        }
-
-        .bp .mobile {
-            background-image: url(https://cdn.suicidesquadgame.com/season-1/battlepass-bg-m.jpg);
-        }
-
-        @media (min-width: 992px) {
-            .bp {
-                background-image: url(https://cdn.suicidesquadgame.com/season-1/battlepass-bg.jpg);
-            }
-
-            .season-1 {
-                background-image: url(https://cdn.suicidesquadgame.com/season-1/season-1-bg-1920.jpg);
-            }
-
-            .webp section.info .bg {
-                background-image: url(https://cdn.suicidesquadgame.com/_2023b/home/game-info-bg.webp);
-            }
-
-            .no-webp section.info .bg {
-                background-image: url(https://cdn.suicidesquadgame.com/_2023b/home/game-info-bg-bg.jpg);
-            }
-
-            section.preorder {
-                background-image: url(https://cdn.suicidesquadgame.com/_2023b/static/footer-metropolis-bg_2560.jpg);
-            }
-        }
-
-        @media (min-width: 1440px) {
-            .bp {
-                background-image: url(https://cdn.suicidesquadgame.com/season-1/battlepass-bg.jpg);
-            }
-
-            .season-1 {
-                background-image: url(https://cdn.suicidesquadgame.com/season-1/season-1-bg.jpg);
-            }
-        }
-    </style>
-
-
-
-    <style>
-        @media (min-width: 992px) {
-            section.bp .desktop .titles h2 {
-                mask-image: url(https://cdn.suicidesquadgame.com/season-1/battlepass-title-mask.webp);
-            }
-        }
-    </style>
+  <!-- Open Graph tags -->
+  <meta property="og:title" content="Justice League Sidekick Recruitment">
+  <meta property="og:description" content="Join the Justice League and become a sidekick! Take our personality test to discover which superhero you could be.">
+  <meta property="og:image" content="https://www.suicidesquadgame.com/images/suicide-squad-share.jpg" />
+  <meta property="og:url" content="https://coursework-phi.vercel.app">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="https://unpkg.com/leopard@^1/dist/index.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"> <!-- Your custom styles -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body style="background-color: #FEFEBE; color: black;">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="Logo.jpg" alt="Justice League Logo" width="30" height="30" class="d-inline-block align-top">
+        Justice ★ League
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="disclaimer.html">Disclaimer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="logout-button" style="cursor: pointer; display: none;">Logout</a>
+          </li>
+          <!-- Add more links as needed -->
+        </ul>
+      </div>
+    </div>
+  </nav>
 
 
 
@@ -116,106 +56,6 @@
 
 
 
-    <style>
-        #MobileMenu .modal-body {
-            background-image: url(https://cdn.suicidesquadgame.com/season-1/mobile-menu-bg.jpg);
-        }
-
-        section.pre-footer {
-            background-image: url(https://cdn.suicidesquadgame.com/_2023b/static/footer-metropolis-bg-m.jpg);
-        }
-
-        @media (min-width: 992px) {
-            section.pre-footer {
-                background-image: url(https://cdn.suicidesquadgame.com/_2023b/static/footer-metropolis-bg_2560.jpg);
-            }
-        }
-
-        @media (min-width: 1600px) {}
-
-        @media (min-width: 1920px) {}
-
-        .hero {
-            position: relative;
-            overflow: hidden;
-            width: 100vw;
-            /* Full width of the viewport */
-            height: 60vh;
-            /* Full height of the viewport */
-            background: #000;
-            /* Fallback background color */
-            padding: 0px 0; /* Adjust the top and bottom padding as needed */
-
-        }
-
-        .logo {
-            display: inline-block;
-            position: relative;
-            color: #ee1d23;
-            /* Red color similar to the Avengers */
-        }
-        .content {
-    margin-top: 20px; /* Adjust the top margin as needed */
-}
-
-
-        .star {
-            color: #0077c7;
-            /* Blue color similar to the Avengers */
-        }
-
-        .paragraph-texts {
-    padding-bottom: 100px; /* Add more padding to the bottom */
-}
-body {
-    font-family: Arial, sans-serif;
-  }
-  
-  .quiz-container {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .question {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .answers {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .answer-button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  
-  .loading-container {
-    display: none;
-  }
-  
-  .loading {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  .img-medium {
-  max-width: 50%; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
-}
 
     </style>
 
@@ -247,97 +87,7 @@ body {
 
         </header>
 
-        <div class="overlap">
-
-
-            <nav id="MainNav" class="main follow">
-
-                <a class="logo d-lg-none" href="http://www.suicidesquadgame.com/en-us">
-                    <img src="images/favicon-32x32.png" alt="V-Games" class="img-fluid">
-                </a>
-
-                <ul class="left">
-
-
-
-                    <li class="navlink green">
-                        <a href="#" v-scroll-to="'#SEASON'" aria-current="page">
-                            <div class="bg"></div>
-                            <div class="lbl">
-                                HEROES
-                                <svg width="6" height="3" viewBox="0 0 6 3" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.5 0.5L3 3L0.5 0.5L0.5 -2.18557e-07L5.5 0L5.5 0.5Z"
-                                        fill="currentColor" />
-                                </svg>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="navlink">
-                        <a href="about.html" v-scroll-to="'#GAME'" aria-current="page">
-                            <div class="bg"></div>
-                            <div class="lbl">
-                                ABOUT
-                                <svg width="6" height="3" viewBox="0 0 6 3" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.5 0.5L3 3L0.5 0.5L0.5 -2.18557e-07L5.5 0L5.5 0.5Z"
-                                        fill="currentColor" />
-                                </svg>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="navlink">
-                        <a href="http://www.suicidesquadgame.com/en-us/community" class="">
-                            <div class="bg"></div>
-                            <div class="lbl">
-                                COMMUNITY
-                            </div>
-                        </a>
-
-                    </li>
-
-
-                    <li class="navlink">
-                        <a href="http://www.suicidesquadgame.com/en-us/media" class="">
-                            <div class="bg "></div>
-                            <div class="lbl">
-                                MEDIA
-                            </div>
-                        </a>
-                    </li>
-
-                </ul>
-
-
-                <ul class="right">
-
-                    <li class="navlink">
-                        <a href="http://www.suicidesquadgame.com/en-us/faq" class="">
-                            <div class="bg "></div>
-                            <div class="lbl">
-                                FAQ
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="navlink buy-btn ">
-                        <a :href='' class="">
-                            <div class="bg "></div>
-                            <div class="lbl">
-                                <span class="star star-animation" style="color: #ee1d23;">J</span><span
-                                    class="star star-animation" style="color: #0077c7;">★</span><span
-                                    class="star star-animation" style="color: #ee1d23;">L</span>
-                            </div>
-
-                        </a>
-
-                    </li>
-
-                </ul>
-
-            </nav>
-
+        
             <section class="hero">
                 <div class="content">
                     <div class="x-grid"></div>
@@ -363,12 +113,14 @@ body {
               </div>
               <div class="question" id="question"></div>
               <div class="answers" id="answers"></div>
-              <div class="progress" id="progress"></div>
+              <div class="progress" id="progress" style="background-color: #FEFEBE;"></div>
               <div class="loading-container" id="loading-container">
                   <div class="loading" id="loading"></div>
                   <div id="loading-text">Loading... 0%</div>
               </div>
+              
           </div>
+
           
           <script>
               const questions = [
@@ -582,6 +334,9 @@ questionElement.appendChild(shareButton);
               // Start personality test
               showQuestion();
           </script>
-          
+            <br>
+              <center><p>&copy; <span id="year"></span> Justice League<br> All rights reserved</p></center>
+           
             </body>
+            
             </html>

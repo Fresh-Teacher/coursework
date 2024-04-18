@@ -56,21 +56,21 @@
     <div id="login-form">
       <h2>Login</h2>
       <select id="superhero-dropdown">
-        <option value="" selected disabled>Select Hero Name</option>
-        <option value="Superman">Superman</option>
-        <option value="Batman">Batman</option>
-        <option value="Wonder Woman">Wonder Woman</option>
-        <option value="Flash">Flash</option>
-        <option value="Aquaman">Aquaman</option>
-        <option value="Green Lantern">Green Lantern</option>
-        <option value="Cyborg">Cyborg</option>
-        <option value="Martian Manhunter">Martian Manhunter</option>
-        <option value="Hawkgirl">Hawkgirl</option>
-        <!-- Add more Justice League characters as needed -->
-      </select><br>
-      <p id="hero-error" style="color: red; display: none;">Please select a hero name!</p>
-      
-      <br><input type="text" id="captcha" placeholder="Enter CAPTCHA"><br>
+  <option value="" selected disabled>Select Hero Name</option>
+  <option value="Superman">Superman</option>
+  <option value="Batman">Batman</option>
+  <option value="Wonder Woman">Wonder Woman</option>
+  <option value="Flash">Flash</option>
+  <option value="Aquaman">Aquaman</option>
+  <option value="Green Lantern">Green Lantern</option>
+  <option value="Cyborg">Cyborg</option>
+  <option value="Martian Manhunter">Martian Manhunter</option>
+  <option value="Hawkgirl">Hawkgirl</option>
+  <!-- Add more Justice League characters as needed -->
+</select><br>
+<p id="hero-error" style="color: red; display: none;">Please select a hero.</p>
+
+      <input type="text" id="captcha" placeholder="Enter CAPTCHA"><br>
       <p id="captcha-text"></p>
       <input type="checkbox" id="remember-me"> <label for="remember-me">Remember Me</label><br>
       <button onclick="login()">Login</button>
@@ -105,40 +105,9 @@
       document.getElementById('user-name').innerText = selectedSuperhero;
     });
 
-   // Generate random captcha code
-var captchaCode = generateCaptcha();
-document.getElementById("captcha-text").innerText = captchaCode;
-
-function generateCaptcha() {
-  var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  var captcha = "";
-  for (var i = 0; i < 6; i++) {
-    captcha += characters.charAt(Math.floor(Math.random() * characters.length));
-  }
-  return captcha;
-}
-
-function login() {
-  var superheroDropdown = document.getElementById("superhero-dropdown");
-  var superheroName = superheroDropdown.value;
+    function login() {
+  var superheroName = document.getElementById("superhero-dropdown").value;
   var rememberMe = document.getElementById("remember-me").checked;
-  var captchaInput = document.getElementById("captcha-input").value;
-
-  // Validate captcha code
-  if (captchaInput !== captchaCode) {
-    document.getElementById("captcha-error").style.display = "block";
-    return; // Prevent further execution of the function
-  } else {
-    document.getElementById("captcha-error").style.display = "none";
-  }
-
-  // Error handling if no hero is selected
-  if (superheroName === "") {
-    document.getElementById("hero-error").style.display = "block";
-    return; // Prevent further execution of the function
-  } else {
-    document.getElementById("hero-error").style.display = "none";
-  }
 
   // Save superhero name in local storage if remember me is checked
   if (rememberMe) {
@@ -151,7 +120,6 @@ function login() {
   document.getElementById("login-form").style.display = "none";
   document.getElementById("logout-button").style.display = "block";
 }
-
 
   </script>
 </body>

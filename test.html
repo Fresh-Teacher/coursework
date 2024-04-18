@@ -339,7 +339,7 @@
     
     // Display the share test button
     const shareButton = document.createElement("button");
-    shareButton.textContent = "Share Test";
+    shareButton.textContent = "Share Test ↪";
     shareButton.className = "btn btn-primary"; // Bootstrap classes
     shareButton.addEventListener("click", function() {
         window.location.href = "share.html";
@@ -354,15 +354,15 @@ function getSuperheroInfo(heroName) {
             return "Batman: You’re the analytical and stealthy sidekick Gotham needs.";
         case "Superman":
             return "Superman: You’re the beacon of hope and unwavering support for Metropolis.";
-        case "WonderWoman":
+        case "Wonder Woman":
             return "Wonder Woman: You’re the fierce warrior by her side, defending Themyscira.";
-        case "MartianManhunter":
+        case "Martian Manhunter":
             return "Martian Manhunter: Your telepathic abilities make you an invaluable ally.";
         case "Zatanna":
             return "Zatanna: Your magical prowess complements her spellcasting.";
-        case "TheFlash":
+        case "The Flash":
             return "The Flash: You’re the speedster who keeps up with Central City’s chaos.";
-        case "GreenArrow":
+        case "Green Arrow":
             return "Green Arrow: Your archery skills hit the bullseye every time.";
         default:
             return "";

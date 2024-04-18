@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join the Justice League and become a sidekick! Take our personality test to discover which superhero you could be.">
+  <title>Justice League Sidekick Recruitment Game</title>
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Bootstrap CSS -->
+
+  <!-- Open Graph tags -->
+  <meta property="og:title" content="Justice League Sidekick Recruitment">
+  <meta property="og:description" content="Join the Justice League and become a sidekick! Take our personality test to discover which superhero you could be.">
+  <meta property="og:image" content="https://www.suicidesquadgame.com/images/suicide-squad-share.jpg" />
+  <meta property="og:url" content="https://coursework-phi.vercel.app">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="https://unpkg.com/leopard@^1/dist/index.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"> <!-- Your custom styles -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body style="background-color: #FEFEBE; color: black;">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="Logo.jpg" alt="Justice League Logo" width="30" height="30" class="d-inline-block align-top">
+        Justice ★ League
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="disclaimer.html">Disclaimer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="logout-button" style="cursor: pointer; display: none;">Logout</a>
+          </li>
+          <!-- Add more links as needed -->
+        </ul>
+      </div>
+    </div>
+  </nav><br><br><br>
+  <div class="container py-5">
+    <center> <button id="greenFlag" class="btn btn-primary">Start Game 🎮</center></button><br>
+    <div id="project"><br></div>
+
+    <script type="module">
+      import project from "./index.js";
+
+      project.attach("#project");
+
+      document.querySelector("#greenFlag").addEventListener("click", () => {
+        project.greenFlag();
+      });
+
+      // Autoplay
+      project.greenFlag();
+    </script>
+  
+    <div id="game-instructions">
+      <p><strong>NB:</strong> <i>This game is suitable for computers but may not work properly on mobile devices.</p></i>
+
+      <h3>Game Controls</h3>
+
+      <p><strong>Controls:</strong></p>
+      <ul>
+        <li><strong>UP ARROW:</strong> Uppercut</li>
+        <li><strong>DOWN ARROW:</strong> Headshot</li>
+        <li><strong>LEFT ARROW:</strong> Block</li>
+        <li><strong>RIGHT ARROW:</strong> Punch</li>
+        <li><strong>LEFT, RIGHT:</strong> Triple Punch</li>
+      </ul>
+      <h3>About the Game</h3>
+      <p>In this action-packed game, you step into the shoes of the iconic superhero Spider-Man as he faces off against his arch-nemesis Venom in an epic battle to save the city. As Spider-Man, you must harness your agility, reflexes, and combat skills to defeat Venom and thwart his evil plans.</p>
+      <p>With the lives of the city's inhabitants hanging in the balance, you must navigate through dynamic environments filled with obstacles and challenges while engaging in intense combat sequences against Venom. Each punch, kick, and web-slinging maneuver brings you closer to victory as you strive to protect the city from imminent destruction.</p>
+      <p>As the fate of the city hangs in the balance, you must rise to the occasion, channelling the spirit of Spider-Man to overcome obstacles, outwit Venom, and emerge victorious. The stakes are high, and the responsibility falls squarely on your shoulders to ensure the safety and well-being of the city's inhabitants. Are you ready to swing into action and save the day as Spider-Man? 🕷️</p>
+    </div>
+  </div>
+
+  <footer>
+    <center><p>&copy; <span id="year"></span> Justice League<br> All rights reserved</p></center>
+  </footer>
+
+  <!-- Bootstrap JS bundle (required for some Bootstrap components) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script> <!-- Your custom script -->
+</body>
+</html>

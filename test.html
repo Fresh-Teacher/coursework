@@ -334,12 +334,9 @@
     // Create a line break
     questionElement.appendChild(document.createElement("br"));
     
-    // Create a line break
-    questionElement.appendChild(document.createElement("br"));
-    
     // Display the share test button
     const shareButton = document.createElement("button");
-    shareButton.textContent = "Share Test ↪";
+    shareButton.textContent = "Share Test";
     shareButton.className = "btn btn-primary"; // Bootstrap classes
     shareButton.addEventListener("click", function() {
         window.location.href = "share.html";
@@ -351,23 +348,113 @@
 function getSuperheroInfo(heroName) {
     switch(heroName) {
         case "Batman":
-            return "Batman: You’re the analytical and stealthy sidekick Gotham needs.";
-        case "Superman":
-            return "Superman: You’re the beacon of hope and unwavering support for Metropolis.";
-        case "Wonder Woman":
-            return "Wonder Woman: You’re the fierce warrior by her side, defending Themyscira.";
-        case "Martian Manhunter":
-            return "Martian Manhunter: Your telepathic abilities make you an invaluable ally.";
+            return "Batman (Bruce Wayne):<br>" +
+                   "Personality: Brooding, determined, and fiercely committed to justice.<br>" +
+                   "Interests and Hobbies:<br>" +
+                   " - Solving mysteries and fighting crime.<br>" +
+                   " - Building advanced gadgets and vehicles.<br>" +
+                   " - Studying various martial arts.<br>" +
+                   "Catchphrases:<br>" +
+                   " - “I’m Batman.”<br>" +
+                   " - “It’s not who I am underneath, but what I do that defines me.”<br>" +
+                   " - “I am vengeance. I am the night.”<br>";
+        case "Cyborg":
+            return "Cyborg (Victor Stone):<br>" +
+                   "Personality: Technologically savvy, compassionate, and determined.<br>" +
+                   "Interests and Hobbies:<br>" +
+                   " - Exploring and mastering his cybernetic abilities.<br>" +
+                   " - Using his technological skills to help others.<br>" +
+                   " - Bonding with fellow heroes.<br>" +
+                   "Catchphrase:<br>" +
+                   " - “Booyah!”<br>";
         case "Zatanna":
-            return "Zatanna: Your magical prowess complements her spellcasting.";
+            return "Zatanna (Zatanna Zatara):<br>" +
+                   "Personality: Charismatic, confident, and passionate about magic.<br>" +
+                   "Interests and Hobbies:<br>" +
+                   " - Performing magic shows.<br>" +
+                   " - Studying ancient spells and artifacts.<br>" +
+                   " - Balancing her dual life as a stage magician and a superhero.<br>" +
+                   "Catchphrase:<br>" +
+                   " - “This is backwards magic!”<br>";
+                   case "Batman":
+            return "Batman (Bruce Wayne):<br>" +
+                   "Personality: Brooding, determined, and fiercely committed to justice.<br>" +
+                   "Interests and Hobbies:<br>" +
+                   " - Solving mysteries and fighting crime.<br>" +
+                   " - Building advanced gadgets and vehicles.<br>" +
+                   " - Studying various martial arts.<br>" +
+                   "Catchphrases:<br>" +
+                   " - “I’m Batman.”<br>" +
+                   " - “It’s not who I am underneath, but what I do that defines me.”<br>" +
+                   " - “I am vengeance. I am the night.”<br>";
+        case "Cyborg":
+            return "Cyborg (Victor Stone):<br>" +
+                   "Personality: Technologically savvy, compassionate, and determined.<br>" +
+                   "Interests and Hobbies:<br>" +
+                   " - Exploring and mastering his cybernetic abilities.<br>" +
+                   " - Using his technological skills to help others.<br>" +
+                   " - Bonding with fellow heroes.<br>" +
+                   "Catchphrase:<br>" +
+                   " - “Booyah!”<br>";
+        case "Zatanna":
+            return "Zatanna (Zatanna Zatara):<br>" +
+                   "Personality: Charismatic, confident, and passionate about magic.<br>" +
+                   "Interests and Hobbies:<br>" +
+                   " - Performing magic shows.<br>" +
+                   " - Studying ancient spells and artifacts.<br>" +
+                   " - Balancing her dual life as a stage magician and a superhero.<br>" +
+                   "Catchphrase:<br>" +
+                   " - “This is backwards magic!”<br>";
+        case "Superman":
+            return "Superman (Clark Kent/Kal-El):<br>" +
+                   "Personality: Compassionate, selfless, and unwaveringly moral.<br>" +
+                   "Interests and Hobbies:<br>" +
+                   " - Protecting Earth and its people.<br>" +
+                   " - Reporting as Clark Kent at the Daily Planet.<br>" +
+                   " - Maintaining close relationships with friends and family.<br>" +
+                   "Catchphrases:<br>" +
+                   " - “I’m always around.”<br>" +
+                   " - “Truth, justice, and the American way.”<br>" +
+                   " - “Up, up, and away!”<br>";
+        case "Wonder Woman":
+            return "Wonder Woman (Diana Prince):<br>" +
+                   "Personality: Courageous, honorable, and fiercely loyal.<br>" +
+                   "Interests and Hobbies:<br>" +
+                   " - Training in combat and mastering her Amazonian abilities.<br>" +
+                   " - Advocating for peace and justice.<br>" +
+                   " - Forming strong bonds with other heroes.<br>" +
+                   "Catchphrase:<br>" +
+                   " - “I will fight for those who cannot fight for themselves.”<br>";
+        case "Martian Manhunter":
+            return "Martian Manhunter (J’onn J’onzz):<br>" +
+                   "Personality: Wise, empathetic, and introspective.<br>" +
+                   "Interests and Hobbies:<br>" +
+                   " - Exploring his Martian heritage and psychic abilities.<br>" +
+                   " - Protecting Earth as a member of the Justice League.<br>" +
+                   " - Seeking connection with humanity.<br>" +
+                   "Catchphrase:<br>" +
+                   " - “The world only makes sense if you force it to.”<br>";
         case "The Flash":
-            return "The Flash: You’re the speedster who keeps up with Central City’s chaos.";
+            return "The Flash (Barry Allen):<br>" +
+                   "Personality: Optimistic, witty, and driven by a sense of duty.<br>" +
+                   "Interests and Hobbies:<br>" +
+                   " - Using his super-speed for good.<br>" +
+                   " - Working as a forensic scientist.<br>" +
+                   " - Sharing camaraderie with fellow speedsters.<br>" +
+                   "Catchphrase:<br>" +
+                   " - “Run, Barry, run!”<br>";
         case "Green Arrow":
-            return "Green Arrow: Your archery skills hit the bullseye every time.";
+            return "Green Arrow (Oliver Queen):<br>" +
+                   "Personality: Rebellious, resourceful, and passionate about justice.<br>" +
+                   "Interests and Hobbies:<br>" +
+                   " - Archery and marksmanship.<br>" +
+                   " - Fighting corruption and inequality.<br>" +
+                   " - Balancing his dual life as a billionaire playboy and a vigilante.<br>" +
+                   "Catchphrase:<br>" +
+                   " - “You have failed this city!”<br>";
         default:
             return "";
     }
-
 
 
 // Append the button to the question element

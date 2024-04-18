@@ -543,35 +543,37 @@ body {
               }
           
               function showResult(heroName) {
-                  loadingContainer.style.display = "none";
-                  questionElement.textContent = `Congratulations! You're fit to be ${heroName} according to your responses.`;
-          
-                  // Create an image element for the matched hero
-                  const imageElement = document.createElement("img");
-                  imageElement.src = `${heroName}.gif`;
-                  imageElement.alt = `${heroName} image`;
-                  imageElement.classList.add("hero-image", "img-medium"); // Add classes for styling
-          
-                  // Append the image to the question element
-                  questionElement.appendChild(imageElement);
-          
-                  // Add a line break
-                  questionElement.appendChild(document.createElement("br"));
-          
-                  // Create a "Repeat Test" button with Bootstrap classes
-                  const backButton = document.createElement("button");
-                  backButton.textContent = "Repeat Test";
-                  backButton.className = "btn btn-danger"; // Bootstrap classes
-          
-                  // Add an event listener to the button
-                  backButton.addEventListener("click", function() {
-                      // Reload the page to repeat the test
-                      window.location.reload();
-                  });
-          
-                  // Append the button to the question element
-                  questionElement.appendChild(backButton);
-              }
+    loadingContainer.style.display = "none";
+    questionElement.innerHTML = `Congratulations! You're fit to be ${heroName} according to your responses.<br>`;
+
+    // Create an image element for the matched hero
+    const imageElement = document.createElement("img");
+    imageElement.src = `${heroName}.gif`;
+    imageElement.alt = `${heroName} image`;
+    imageElement.classList.add("hero-image", "img-medium"); // Add classes for styling
+
+    // Append the image to the question element
+    questionElement.appendChild(imageElement);
+
+    // Create a line break
+    questionElement.appendChild(document.createElement("br"));
+
+// Create a "SHARE TEST" button with Bootstrap classes
+const shareButton = document.createElement("button");
+shareButton.textContent = "Share Test";
+shareButton.className = "btn btn-primary"; // Bootstrap classes
+
+// Add an event listener to the button
+shareButton.addEventListener("click", function() {
+    // Redirect to the share.html page
+    window.location.href = "share.html";
+});
+
+// Append the button to the question element
+questionElement.appendChild(shareButton);
+
+}
+
           
               function updateProgress() {
                   progressElement.textContent = `Question ${currentQuestionIndex + 1} of ${questions.length}`;

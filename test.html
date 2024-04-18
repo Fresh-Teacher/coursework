@@ -111,6 +111,14 @@
               <div class="paragraph-texts">
                   <center><h1 class="logo">PERSONALITY TEST:</h1><br></center>
               </div>
+              <!-- New section for results -->
+<div id="result-section" class="d-none">
+  <h2>Congrats!!! Your new mentor is…</h2>
+  <div id="hero-info">
+    <!-- Hero picture and info will be dynamically inserted here -->
+  </div>
+  <p>Get ready to fight crime and explore a whole new world alongside them. Good luck, rookie!!!</p>
+</div>
               <div class="question" id="question"></div>
               <div class="answers" id="answers"></div>
               <div class="progress" id="progress" style="background-color: #FEFEBE;"></div>
@@ -295,31 +303,72 @@
               }
           
               function showResult(heroName) {
+    // Hide loading container
     loadingContainer.style.display = "none";
-    questionElement.innerHTML = `Congratulations! You're fit to be ${heroName} according to your responses.<br>`;
-
+    
+    // Display congratulations message
+    questionElement.innerHTML = `Congrats!!! Your new mentor is…<br><br>`;
+    
     // Create an image element for the matched hero
     const imageElement = document.createElement("img");
-    imageElement.src = `${heroName}.gif`;
+    imageElement.src = `${heroName}.gif`; // Assuming the image file name is the same as the hero name
     imageElement.alt = `${heroName} image`;
     imageElement.classList.add("hero-image", "img-medium"); // Add classes for styling
-
+    
     // Append the image to the question element
     questionElement.appendChild(imageElement);
-
+    
     // Create a line break
     questionElement.appendChild(document.createElement("br"));
+    
+    // Add information about the superhero
+    const superheroInfo = getSuperheroInfo(heroName);
+    questionElement.innerHTML += superheroInfo;
+    
+    // Create a line break
+    questionElement.appendChild(document.createElement("br"));
+    
+    // Display additional message
+    questionElement.innerHTML += `Get ready to fight crime and explore a whole new world alongside them. Good luck rookie!!!`;
+    
+    // Create a line break
+    questionElement.appendChild(document.createElement("br"));
+    
+    // Create a line break
+    questionElement.appendChild(document.createElement("br"));
+    
+    // Display the share test button
+    const shareButton = document.createElement("button");
+    shareButton.textContent = "Share Test";
+    shareButton.className = "btn btn-primary"; // Bootstrap classes
+    shareButton.addEventListener("click", function() {
+        window.location.href = "share.html";
+    });
+    questionElement.appendChild(shareButton);
+}
 
-// Create a "SHARE TEST" button with Bootstrap classes
-const shareButton = document.createElement("button");
-shareButton.textContent = "Share Test";
-shareButton.className = "btn btn-primary"; // Bootstrap classes
+// Function to get superhero information based on their name
+function getSuperheroInfo(heroName) {
+    switch(heroName) {
+        case "Batman":
+            return "Batman: You’re the analytical and stealthy sidekick Gotham needs.";
+        case "Superman":
+            return "Superman: You’re the beacon of hope and unwavering support for Metropolis.";
+        case "WonderWoman":
+            return "Wonder Woman: You’re the fierce warrior by her side, defending Themyscira.";
+        case "MartianManhunter":
+            return "Martian Manhunter: Your telepathic abilities make you an invaluable ally.";
+        case "Zatanna":
+            return "Zatanna: Your magical prowess complements her spellcasting.";
+        case "TheFlash":
+            return "The Flash: You’re the speedster who keeps up with Central City’s chaos.";
+        case "GreenArrow":
+            return "Green Arrow: Your archery skills hit the bullseye every time.";
+        default:
+            return "";
+    }
 
-// Add an event listener to the button
-shareButton.addEventListener("click", function() {
-    // Redirect to the share.html page
-    window.location.href = "share.html";
-});
+
 
 // Append the button to the question element
 questionElement.appendChild(shareButton);

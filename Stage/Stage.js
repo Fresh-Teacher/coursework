@@ -15,82 +15,191 @@ export default class Stage extends StageBase {
 
     this.costumes = [
       new Costume("backdrop1", "./Stage/costumes/backdrop1.svg", {
-        x: 322.927855,
-        y: 284.65328000000005,
+        x: 240,
+        y: 180,
+      }),
+      new Costume("backdrop2", "./Stage/costumes/backdrop2.svg", {
+        x: 240,
+        y: 180,
+      }),
+      new Costume("backdrop3", "./Stage/costumes/backdrop3.svg", {
+        x: 240,
+        y: 180,
+      }),
+      new Costume("backdrop4", "./Stage/costumes/backdrop4.svg", {
+        x: 240,
+        y: 180,
+      }),
+      new Costume("backdrop5", "./Stage/costumes/backdrop5.svg", {
+        x: 240,
+        y: 180,
+      }),
+      new Costume("backdrop6", "./Stage/costumes/backdrop6.svg", {
+        x: 240,
+        y: 180,
+      }),
+      new Costume("backdrop7", "./Stage/costumes/backdrop7.svg", {
+        x: 240,
+        y: 180,
+      }),
+      new Costume("backdrop8", "./Stage/costumes/backdrop8.svg", {
+        x: 240,
+        y: 180,
+      }),
+      new Costume("backdrop9", "./Stage/costumes/backdrop9.svg", {
+        x: 240,
+        y: 180,
+      }),
+      new Costume("backdrop10", "./Stage/costumes/backdrop10.svg", {
+        x: 240,
+        y: 180,
+      }),
+      new Costume("backdrop11", "./Stage/costumes/backdrop11.svg", {
+        x: 240,
+        y: 180,
+      }),
+      new Costume("backdrop12", "./Stage/costumes/backdrop12.svg", {
+        x: 240,
+        y: 180,
+      }),
+      new Costume("backdrop13", "./Stage/costumes/backdrop13.svg", {
+        x: 240,
+        y: 180,
+      }),
+      new Costume("backdrop14", "./Stage/costumes/backdrop14.svg", {
+        x: 240,
+        y: 180,
+      }),
+      new Costume("backdrop15", "./Stage/costumes/backdrop15.svg", {
+        x: 240,
+        y: 180,
+      }),
+      new Costume("backdrop16", "./Stage/costumes/backdrop16.svg", {
+        x: 240,
+        y: 180,
+      }),
+      new Costume("backdrop17", "./Stage/costumes/backdrop17.svg", {
+        x: 240,
+        y: 180,
+      }),
+      new Costume("backdrop18", "./Stage/costumes/backdrop18.svg", {
+        x: 240,
+        y: 180,
+      }),
+      new Costume("backdrop19", "./Stage/costumes/backdrop19.svg", {
+        x: 240,
+        y: 180,
       }),
     ];
 
     this.sounds = [
-      new Sound("Win", "./Stage/sounds/Win.wav"),
-      new Sound("Lose", "./Stage/sounds/Lose.wav"),
-      new Sound("Cymbal Echo", "./Stage/sounds/Cymbal Echo.wav"),
-      new Sound("Drive Around", "./Stage/sounds/Drive Around.wav"),
-      new Sound("Drum Jam", "./Stage/sounds/Drum Jam.wav"),
-      new Sound("Drum Funky", "./Stage/sounds/Drum Funky.wav"),
-      new Sound("Drum Satellite", "./Stage/sounds/Drum Satellite.wav"),
+      new Sound(
+        "The Avengers Theme Song.mp3",
+        "./Stage/sounds/The Avengers Theme Song.mp3.wav"
+      ),
     ];
 
     this.triggers = [
       new Trigger(Trigger.GREEN_FLAG, this.whenGreenFlagClicked),
-      new Trigger(Trigger.BROADCAST, { name: "P2Die" }, this.whenIReceiveP2die),
-      new Trigger(Trigger.BROADCAST, { name: "P1die" }, this.whenIReceiveP1die),
       new Trigger(Trigger.GREEN_FLAG, this.whenGreenFlagClicked2),
+      new Trigger(Trigger.BROADCAST, { name: "next" }, this.whenIReceiveNext),
+      new Trigger(Trigger.BROADCAST, { name: "start" }, this.whenIReceiveStart),
+      new Trigger(Trigger.GREEN_FLAG, this.whenGreenFlagClicked3),
     ];
 
-    this.vars.p1Health = 100;
-    this.vars.p2Health = 100;
-    this.vars.p2attack = 3;
-    this.vars.vdamage = -5;
-    this.vars.sdamage = -5;
-    this.vars.difficulty = 3;
-    this.vars.p1Attack = "idle";
-    this.vars.combo = 0;
-
-    this.watchers.difficulty = new Watcher({
-      label: "difficulty",
-      style: "slider",
-      visible: true,
-      value: () => this.vars.difficulty,
-      setValue: (value) => {
-        this.vars.difficulty = value;
-      },
-      step: 1,
-      min: 1,
-      max: 3,
-      x: 583,
-      y: -142,
-    });
+    this.vars.cap = 0;
+    this.vars.iron = 2;
+    this.vars.thor = 0;
+    this.vars.hulk = 10;
+    this.vars.widow = 0;
+    this.vars.hawkeye = 0;
   }
 
   *whenGreenFlagClicked() {
-    this.effects.pixelate = 15;
-  }
-
-  *whenIReceiveP2die() {
-    this.audioEffects.pitch = -100;
-    yield* this.wait(0.5);
-    yield* this.startSound("Win");
-  }
-
-  *whenIReceiveP1die() {
-    yield* this.wait(0.5);
-    yield* this.startSound("Lose");
+    this.costume = "backdrop1";
   }
 
   *whenGreenFlagClicked2() {
-    this.audioEffects.volume = 100;
-    this.audioEffects.clear();
-    yield* this.wait(2.1);
-    while (true) {
+    yield* this.startSound("The Avengers Theme Song.mp3");
+  }
+
+  *whenIReceiveNext() {
+    if (this.costumeNumber === 13) {
       if (
-        this.compare(this.vars.p1Health, 0) > 0 &&
-        this.compare(this.vars.p2Health, 0) > 0
+        this.compare(this.vars.cap, this.vars.hawkeye) > 0 &&
+        this.compare(this.vars.cap, this.vars.hulk) > 0 &&
+        this.compare(this.vars.cap, this.vars.iron) > 0 &&
+        this.compare(this.vars.cap, this.vars.thor) > 0 &&
+        this.compare(this.vars.cap, this.vars.widow) > 0
       ) {
-        yield* this.playSoundUntilDone(this.random(3, 7));
-      } else {
-        return;
+        this.costume = "backdrop14";
+        this.broadcast("Done");
       }
-      yield;
+      if (
+        this.compare(this.vars.hawkeye, this.vars.cap) > 0 &&
+        this.compare(this.vars.hawkeye, this.vars.hulk) > 0 &&
+        this.compare(this.vars.hawkeye, this.vars.thor) > 0 &&
+        this.compare(this.vars.hawkeye, this.vars.iron) > 0 &&
+        this.compare(this.vars.hawkeye, this.vars.cap) > 0
+      ) {
+        this.costume = "backdrop19";
+        this.broadcast("Done");
+      }
+      if (
+        this.compare(this.vars.hulk, this.vars.cap) > 0 &&
+        this.compare(this.vars.hulk, this.vars.hawkeye) > 0 &&
+        this.compare(this.vars.hulk, this.vars.widow) > 0 &&
+        this.compare(this.vars.hulk, this.vars.thor) > 0 &&
+        this.compare(this.vars.hulk, this.vars.iron) > 0
+      ) {
+        this.costume = "backdrop17";
+        this.broadcast("Done");
+      }
+      if (
+        this.compare(this.vars.iron, this.vars.cap) > 0 &&
+        this.compare(this.vars.iron, this.vars.thor) > 0 &&
+        this.compare(this.vars.iron, this.vars.widow) > 0 &&
+        this.compare(this.vars.iron, this.vars.hawkeye) > 0 &&
+        this.compare(this.vars.iron, "") > 0
+      ) {
+        this.costume = "backdrop15";
+        this.broadcast("Done");
+      }
+      if (
+        this.compare(this.vars.thor, this.vars.cap) > 0 &&
+        this.compare(this.vars.thor, this.vars.hawkeye) > 0 &&
+        this.compare(this.vars.thor, this.vars.iron) > 0 &&
+        this.compare(this.vars.thor, this.vars.widow) > 0 &&
+        this.compare(this.vars.thor, this.vars.hulk) > 0
+      ) {
+        this.costume = "backdrop16";
+        this.broadcast("Done");
+      }
+      if (
+        this.compare(this.vars.widow, this.vars.cap) > 0 &&
+        this.compare(this.vars.widow, this.vars.hawkeye) > 0 &&
+        this.compare(this.vars.widow, this.vars.hulk) > 0 &&
+        this.compare(this.vars.widow, this.vars.iron) > 0 &&
+        this.compare(this.vars.widow, this.vars.thor) > 0
+      ) {
+        this.costume = "backdrop18";
+        this.broadcast("Done");
+      }
+    } else {
+      this.costumeNumber++;
     }
+  }
+
+  *whenIReceiveStart() {
+    this.costume = "backdrop2";
+  }
+
+  *whenGreenFlagClicked3() {
+    this.vars.cap = 0;
+    this.vars.iron = 0;
+    this.vars.thor = 0;
+    this.vars.hulk = 0;
+    this.vars.widow = 0;
+    this.vars.hawkeye = 0;
   }
 }

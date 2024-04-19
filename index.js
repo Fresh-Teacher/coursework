@@ -4,108 +4,97 @@ import {
 } from "https://unpkg.com/leopard@^1/dist/index.esm.js";
 
 import Stage from "./Stage/Stage.js";
-import SpiderMan from "./SpiderMan/SpiderMan.js";
-import Venom from "./Venom/Venom.js";
-import Effects from "./Effects/Effects.js";
-import Healthbar from "./Healthbar/Healthbar.js";
-import StatDrawer from "./StatDrawer/StatDrawer.js";
-import KO from "./KO/KO.js";
-import Combo from "./Combo/Combo.js";
 import Sprite1 from "./Sprite1/Sprite1.js";
-import DoubleOuch from "./DoubleOuch/DoubleOuch.js";
+import Cap from "./Cap/Cap.js";
+import IronMan from "./IronMan/IronMan.js";
+import Thor from "./Thor/Thor.js";
+import Hulk from "./Hulk/Hulk.js";
+import BlackWidow from "./BlackWidow/BlackWidow.js";
+import Hawkeye from "./Hawkeye/Hawkeye.js";
+import Sprite9 from "./Sprite9/Sprite9.js";
 
-const stage = new Stage({ costumeNumber: 1 });
+const stage = new Stage({ costumeNumber: 15 });
 
 const sprites = {
-  SpiderMan: new SpiderMan({
-    x: -114,
-    y: -55,
-    direction: 1,
-    rotationStyle: Sprite.RotationStyle.LEFT_RIGHT,
-    costumeNumber: 6,
-    size: 150,
-    visible: true,
-    layerOrder: 8,
-  }),
-  Venom: new Venom({
-    x: 36,
-    y: -28,
-    direction: -100.2039737217317,
-    rotationStyle: Sprite.RotationStyle.LEFT_RIGHT,
-    costumeNumber: 32,
-    size: 150,
-    visible: true,
-    layerOrder: 1,
-  }),
-  Effects: new Effects({
-    x: 894,
-    y: -55,
-    direction: 90,
-    rotationStyle: Sprite.RotationStyle.ALL_AROUND,
-    costumeNumber: 2,
-    size: 289.033315271528,
-    visible: false,
-    layerOrder: 9,
-  }),
-  Healthbar: new Healthbar({
-    x: 0,
-    y: 0,
+  Sprite1: new Sprite1({
+    x: 34,
+    y: -7,
     direction: 90,
     rotationStyle: Sprite.RotationStyle.ALL_AROUND,
     costumeNumber: 1,
     size: 100,
-    visible: true,
+    visible: false,
     layerOrder: 2,
   }),
-  StatDrawer: new StatDrawer({
-    x: 189,
-    y: 152,
+  Cap: new Cap({
+    x: -158,
+    y: 27,
     direction: 90,
     rotationStyle: Sprite.RotationStyle.ALL_AROUND,
     costumeNumber: 1,
-    size: 100,
-    visible: true,
-    layerOrder: 3,
-  }),
-  KO: new KO({
-    x: 19,
-    y: 6,
-    direction: 90,
-    rotationStyle: Sprite.RotationStyle.ALL_AROUND,
-    costumeNumber: 2,
     size: 100,
     visible: false,
-    layerOrder: 6,
+    layerOrder: 3,
   }),
-  Combo: new Combo({
-    x: -142,
-    y: 92,
+  IronMan: new IronMan({
+    x: -157,
+    y: -14,
     direction: 90,
     rotationStyle: Sprite.RotationStyle.ALL_AROUND,
     costumeNumber: 1,
-    size: 55.00000000000001,
+    size: 100,
+    visible: false,
+    layerOrder: 8,
+  }),
+  Thor: new Thor({
+    x: -157,
+    y: -59,
+    direction: 90,
+    rotationStyle: Sprite.RotationStyle.ALL_AROUND,
+    costumeNumber: 1,
+    size: 100,
     visible: false,
     layerOrder: 4,
   }),
-  Sprite1: new Sprite1({
-    x: 0,
-    y: 0,
-    direction: 90,
-    rotationStyle: Sprite.RotationStyle.ALL_AROUND,
-    costumeNumber: 2,
-    size: 100,
-    visible: true,
-    layerOrder: 7,
-  }),
-  DoubleOuch: new DoubleOuch({
-    x: 36,
-    y: 28,
+  Hulk: new Hulk({
+    x: -157,
+    y: -104,
     direction: 90,
     rotationStyle: Sprite.RotationStyle.ALL_AROUND,
     costumeNumber: 1,
     size: 100,
     visible: false,
     layerOrder: 5,
+  }),
+  BlackWidow: new BlackWidow({
+    x: -158,
+    y: -148,
+    direction: 90,
+    rotationStyle: Sprite.RotationStyle.ALL_AROUND,
+    costumeNumber: 1,
+    size: 100,
+    visible: false,
+    layerOrder: 6,
+  }),
+  Hawkeye: new Hawkeye({
+    x: -157,
+    y: -189,
+    direction: 90,
+    rotationStyle: Sprite.RotationStyle.ALL_AROUND,
+    costumeNumber: 1,
+    size: 100,
+    visible: false,
+    layerOrder: 7,
+  }),
+  Sprite9: new Sprite9({
+    x: 87,
+    y: -24,
+    direction: 90,
+    rotationStyle: Sprite.RotationStyle.ALL_AROUND,
+    costumeNumber: 1,
+    size: 170.00000000000003,
+    visible: false,
+    layerOrder: 1,
   }),
 };
 

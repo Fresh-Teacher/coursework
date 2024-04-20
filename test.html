@@ -55,13 +55,6 @@
         </div>
     </nav>
 
-
-
-
-
-
-
-
     </style>
 
     <link rel="preload" as="style" href="https://www.suicidesquadgame.com/build/assets/app-b99eddf2.css" />
@@ -250,6 +243,8 @@
                         questionElement.innerHTML += `Get ready to fight crime and explore a whole new world alongside them. Good luck rookie!!!`;
 
                         // Add the "Share Test" button
+                        questionElement.appendChild(document.createElement("br"));
+                        questionElement.appendChild(document.createElement("br"));
                         const shareButton = document.createElement("button");
                         shareButton.textContent = "Share Test";
                         shareButton.className = "btn btn-primary";

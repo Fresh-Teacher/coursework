@@ -55,13 +55,6 @@
         </div>
     </nav>
 
-
-
-
-
-
-
-
     </style>
 
     <link rel="preload" as="style" href="https://www.suicidesquadgame.com/build/assets/app-b99eddf2.css" />
@@ -246,29 +239,21 @@
                         questionElement.innerHTML += infoHTML;
 
                         // Add the "Get ready to fight crime..." message after superhero info
-questionElement.appendChild(document.createElement("br"));
-questionElement.innerHTML += `Get ready to fight crime and explore a whole new world alongside them. Good luck rookie!!!`;
+                        questionElement.appendChild(document.createElement("br"));
+                        questionElement.innerHTML += `Get ready to fight crime and explore a whole new world alongside them. Good luck rookie!!!`;
 
-// Add the "Share Test" button
-questionElement.appendChild(document.createElement("br"));
-const shareButton = document.createElement("button");
-shareButton.textContent = "Share Test";
-shareButton.className = "btn btn-primary";
-shareButton.addEventListener("click", function () {
-    window.location.href = "share.html";
-});
-questionElement.appendChild(shareButton);
-
-// Add the "Repeat Test" button
-questionElement.appendChild(document.createElement("br"));
-const repeatButton = document.createElement("button");
-repeatButton.textContent = "Repeat Test";
-repeatButton.className = "btn btn-secondary";
-repeatButton.addEventListener("click", function () {
-    window.location.reload(); // Reloads the page
-});
-questionElement.appendChild(repeatButton);
-
+                        // Add the "Share Test" button
+                        questionElement.appendChild(document.createElement("br"));
+                        questionElement.appendChild(document.createElement("br"));
+                        const shareButton = document.createElement("button");
+                        shareButton.textContent = "Share Test";
+                        shareButton.className = "btn btn-primary";
+                        shareButton.addEventListener("click", function () {
+                            window.location.href = "share.html";
+                        });
+                        questionElement.appendChild(shareButton);
+                    });
+                }
 
 
                 // Function to get superhero information based on their name

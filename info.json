@@ -1,0 +1,94 @@
+{
+    "Batman": {
+        "personality": "Brooding, determined, and fiercely committed to justice.",
+        "interests": [
+            "Solving mysteries and fighting crime.",
+            "Building advanced gadgets and vehicles.",
+            "Studying various martial arts."
+        ],
+        "catchphrases": [
+            "I’m Batman.",
+            "It’s not who I am underneath, but what I do that defines me.",
+            "I am vengeance. I am the night."
+        ]
+    },
+    "Cyborg": {
+        "personality": "Technologically savvy, compassionate, and determined.",
+        "interests": [
+            "Exploring and mastering his cybernetic abilities.",
+            "Using his technological skills to help others.",
+            "Bonding with fellow heroes."
+        ],
+        "catchphrases": [
+            "Booyah!"
+        ]
+    },
+    "Zatanna": {
+        "personality": "Charismatic, confident, and passionate about magic.",
+        "interests": [
+            "Performing magic shows.",
+            "Studying ancient spells and artifacts.",
+            "Balancing her dual life as a stage magician and a superhero."
+        ],
+        "catchphrases": [
+            "This is backwards magic!"
+        ]
+    },
+    "Superman": {
+        "personality": "Compassionate, selfless, and unwaveringly moral.",
+        "interests": [
+            "Protecting Earth and its people.",
+            "Reporting as Clark Kent at the Daily Planet.",
+            "Maintaining close relationships with friends and family."
+        ],
+        "catchphrases": [
+            "I’m always around.",
+            "Truth, justice, and the American way.",
+            "Up, up, and away!"
+        ]
+    },
+    "Wonder Woman": {
+        "personality": "Courageous, honorable, and fiercely loyal.",
+        "interests": [
+            "Training in combat and mastering her Amazonian abilities.",
+            "Advocating for peace and justice.",
+            "Forming strong bonds with other heroes."
+        ],
+        "catchphrases": [
+            "I will fight for those who cannot fight for themselves."
+        ]
+    },
+    "Martian Manhunter": {
+        "personality": "Wise, empathetic, and introspective.",
+        "interests": [
+            "Exploring his Martian heritage and psychic abilities.",
+            "Protecting Earth as a member of the Justice League.",
+            "Seeking connection with humanity."
+        ],
+        "catchphrases": [
+            "The world only makes sense if you force it to."
+        ]
+    },
+    "The Flash": {
+        "personality": "Optimistic, witty, and driven by a sense of duty.",
+        "interests": [
+            "Using his super-speed for good.",
+            "Working as a forensic scientist.",
+            "Sharing camaraderie with fellow speedsters."
+        ],
+        "catchphrases": [
+            "Run, Barry, run!"
+        ]
+    },
+    "Green Arrow": {
+        "personality": "Rebellious, resourceful, and passionate about justice.",
+        "interests": [
+            "Archery and marksmanship.",
+            "Fighting corruption and inequality.",
+            "Balancing his dual life as a billionaire playboy and a vigilante."
+        ],
+        "catchphrases": [
+            "You have failed this city!"
+        ]
+    }
+}

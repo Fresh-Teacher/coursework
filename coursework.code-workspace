@@ -1,0 +1,41 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../dd28e037-eaf9-4adb-a401-337af9c43e2b/Combo"
+		},
+		{
+			"path": "../dd28e037-eaf9-4adb-a401-337af9c43e2b/DoubleOuch"
+		},
+		{
+			"path": "../dd28e037-eaf9-4adb-a401-337af9c43e2b/Effects"
+		},
+		{
+			"path": "../dd28e037-eaf9-4adb-a401-337af9c43e2b/Healthbar"
+		},
+		{
+			"path": "../dd28e037-eaf9-4adb-a401-337af9c43e2b/KO"
+		},
+		{
+			"path": "../dd28e037-eaf9-4adb-a401-337af9c43e2b/SpiderMan"
+		},
+		{
+			"path": "../dd28e037-eaf9-4adb-a401-337af9c43e2b/Sprite1"
+		},
+		{
+			"path": "../dd28e037-eaf9-4adb-a401-337af9c43e2b/Stage"
+		},
+		{
+			"path": "../dd28e037-eaf9-4adb-a401-337af9c43e2b/StatDrawer"
+		},
+		{
+			"path": "../dd28e037-eaf9-4adb-a401-337af9c43e2b/Venom"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"liveServer.settings.multiRootWorkspaceName": "coursework"
+	}
+}

@@ -8,6 +8,14 @@
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- Bootstrap CSS -->
+
+  <!-- Open Graph tags -->
+<meta property="og:title" content="Justice League Sidekick Recruitment">
+<meta property="og:description" content="Join the Justice League and become a sidekick! Take our personality test to discover which superhero you could be.">
+<meta property="og:image" content="https://www.suicidesquadgame.com/images/suicide-squad-share.jpg" />
+<meta property="og:url" content="https://coursework-phi.vercel.app">
+<meta name="twitter:card" content="summary_large_image">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css"> <!-- Your custom styles -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -50,36 +58,24 @@
           Your browser does not support the video tag.
         </video>
         <h1 class="recruitment-title"><b>Justice League Sidekick Recruitment</b></h1>
+
       </div>
     </section>
-  <div class="container"><h2>Login</h2>
-    <div id="login-form">
-      <!-- <h2>Login</h2> -->
-      <select id="superhero-dropdown">
-        <option value="" selected disabled>Select Super Hero Name</option>
-        <option value="Superman">Superman</option>
-        <option value="Batman">Batman</option>
-        <option value="Wonder Woman">Wonder Woman</option>
-        <option value="Flash">Flash</option>
-        <option value="Aquaman">Aquaman</option>
-        <option value="Green Lantern">Green Lantern</option>
-        <option value="Cyborg">Cyborg</option>
-        <option value="Martian Manhunter">Martian Manhunter</option>
-        <option value="Hawkgirl">Hawkgirl</option>
-        <!-- Add more Justice League characters as needed -->
-      </select><br>
-      <p id="hero-error" style="color: red; display: none;">Please select a hero.</p>
-      <br>
+  
 
+  
+  <div class="container">
+    <div id="login-form">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Your Name"><br>
       <input type="text" id="captcha" placeholder="Enter CAPTCHA"><br>
       <p id="captcha-text"></p>
-      <p id="captcha-error" style="color: red; display: none;"></p>
       <input type="checkbox" id="remember-me"> <label for="remember-me">Remember Me</label><br>
       <button onclick="login()">Login</button>
     </div>
     <div id="instructions">
-      <center> <h2>Calling All Sidekicks!!!</h2></center>
-      <h5>Hello, <span id="user-name"></span>!</h5>
+      <h2>Calling All Sidekicks!!!</h2>
+      <h5>Dear <span id="user-name"></span>,</h5>
       <p><strong>The Justice League,</strong> the greatest superhero team in the <strong>DC Multiverse,</strong> has faced countless cosmic threats, saved entire universes but the battles are far from over. As the universe teeters on the edge of chaos, we recognize the need to expand our ranks and prepare for the challenges ahead.</p>
       <p><strong>OUR MISSION IS CLEAR:</strong> <em>to safeguard humanity and defend the cosmos from unimaginable dangers.</em> But we can’t do it alone. We need <i>Fresh Blood</i>, new perspectives, and unwavering dedication. That’s why we’ve launched the <strong><em>Justice League Recruitment Program</em></strong>—an opportunity for aspiring heroes to join our illustrious ranks.</p>
       <p>So, are you ready to discover your destiny alongside a legendary superhero? Our personality test is designed to pair you with the perfect caped crusader. Whether you’re a tech whiz, a heart of gold, or a master of wit, there’s a superhero waiting to mentor you.</p>
@@ -89,9 +85,10 @@
           <li><strong>Meet Your Match:</strong> Once you’ve completed the test, our supercomputers analyze your responses. Drumroll, please! You’ll be paired with a superhero who complements your strengths and quirks.</li>
       </ol>
       <center><a href="test.html">
-          <button class="btn btn-success btn-pulse">TAKE TEST NOW!</button>
-        </a></center>
-      </div>
+          <button class="btn btn-success btn-pulse"><strong>Start Personality Test</strong></button>
+      </a></center>
+  </div>
+      
   </div>
 
   <footer>
@@ -101,46 +98,5 @@
   <!-- Bootstrap JS bundle (required for some Bootstrap components) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script> <!-- Your custom script -->
-  <script>
-document.getElementById('superhero-dropdown').addEventListener('change', function() {
-      var selectedSuperhero = this.value;
-      document.getElementById('user-name').innerText = selectedSuperhero;
-    });
-
-    function login() {
-  var superheroDropdown = document.getElementById("superhero-dropdown");
-  var superheroName = superheroDropdown.value;
-  var captchaInput = document.getElementById("captcha").value;
-  var rememberMe = document.getElementById("remember-me").checked;
-
-  // Error handling if no hero is selected
-  if (superheroName === "") {
-    document.getElementById("hero-error").style.display = "block";
-    return; // Prevent further execution of the function
-  } else {
-    document.getElementById("hero-error").style.display = "none";
-  }
-
-  // Error handling if CAPTCHA is empty
-  if (captchaInput.trim() === "") {
-    document.getElementById("captcha-error").innerText = "Please enter the CAPTCHA.";
-    return; // Prevent further execution of the function
-  } else {
-    document.getElementById("captcha-error").innerText = "";
-  }
-
-  // Save superhero name in local storage if remember me is checked
-  if (rememberMe) {
-    localStorage.setItem("superheroName", superheroName);
-  }
-
-  // Display greeting message with superhero name
-  document.getElementById("user-name").innerText = superheroName;
-  document.getElementById("instructions").style.display = "block";
-  document.getElementById("login-form").style.display = "none";
-  document.getElementById("logout-button").style.display = "block";
-}
-
-  </script>
 </body>
 </html>

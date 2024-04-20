@@ -1,0 +1,53 @@
+[
+    {
+      "question": "Which city would you prefer to patrol with your hero?",
+      "answers": ["Gotham City", "Metropolis", "Themyscira", "Central City"],
+      "values": ["Batman", "Superman", "Wonder Woman", "The Flash"]
+    },
+    {
+      "question": "What’s your preferred mode of transportation?",
+      "answers": ["Batmobile", "Kryptonian spaceship", "Invisible jet", "Speed Force"],
+      "values": ["Batman", "Superman", "Wonder Woman", "The Flash"]
+    },
+    {
+      "question": "Choose a superpower to complement your hero:",
+      "answers": ["Genius-level intellect", "Telepathy", "Magic", "Archery skills"],
+      "values": ["Cyborg", "Martian Manhunter", "Zatanna", "Green Arrow"]
+    },
+    {
+      "question": "How do you handle stress during a battle?",
+      "answers": ["Analyze the situation calmly", "Channel your inner strength", "Invoke ancient Amazonian wisdom", "Run circles around the enemy"],
+      "values": ["Batman", "Superman", "Wonder Woman", "The Flash"]
+    },
+    {
+      "question": "Your ideal sidekick uniform color:",
+      "answers": ["Black and gray", "Red and blue", "Golden armor", "Scarlet lightning bolt"],
+      "values": ["Batman", "Superman", "Wonder Woman", "The Flash"]
+    },
+    {
+      "question": "What’s your favorite gadget?",
+      "answers": ["Batarangs", "Heat vision goggles", "Lasso of Truth", "Speedster boots"],
+      "values": ["Batman", "Superman", "Wonder Woman", "The Flash"]
+    },
+    {
+      "question": "Choose a catchphrase:",
+      "answers": ["“I am vengeance, I am the night!”", "“Up, up, and away!”", "“By Hera’s grace!”", "“Zoom, zoom!”"],
+      "values": ["Batman", "Superman", "Wonder Woman", "The Flash"]
+    },
+    {
+      "question": "What’s your preferred team dynamic?",
+      "answers": ["Lone wolf vigilante", "Global protector", "Warrior of justice", "Speedster squad"],
+      "values": ["Batman", "Superman", "Wonder Woman", "The Flash"]
+    },
+    {
+      "question": "How do you unwind after a mission?",
+      "answers": ["Brooding in the Batcave", "Flying through the stratosphere", "Training with the Amazons", "Challenging time-traveling villains"],
+      "values": ["Batman", "Superman", "Wonder Woman", "The Flash"]
+    },
+    {
+      "question": "Your ultimate goal as a sidekick:",
+      "answers": ["Uncover every villain’s secret identity", "Inspire hope in humanity", "Bring peace to the world", "Break the sound barrier daily"],
+      "values": ["Batman", "Superman", "Wonder Woman", "The Flash"]
+    }
+  ]
+  
